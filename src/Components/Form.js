@@ -4,13 +4,12 @@ const Form = ( {inputPlayer, setInputPlayer, players, setPlayers} ) => {
 
     const onChangeHandler = (e) => {
         setInputPlayer(e.target.value);
-        console.log(e.target.value);
     };
 
     const addPlayerHandler = (e) => {
         e.preventDefault();
         setPlayers([
-            ...players, {name: inputPlayer}
+            ...players, {name: inputPlayer, id:  Math.random() * 1000, teamA: 0}
         ]);
         setInputPlayer('');
     };

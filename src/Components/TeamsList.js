@@ -3,26 +3,23 @@ import React from 'react';
 //Import components
 import Player from './Player';
 
-const PlayersList = ({ players, setPlayers, teamA }) => {
-
-    return(
+const TeamsList = ( {players , setPlayers, teamA, setTeamA, player}) => {
+    return (
         <form>
-            <h3>All players</h3>
+            <h5>TeamA</h5>
             <ul>
-                {players.map( (player) => (
+                {teamA.map( (player) => (
                     <Player
                         players={players}
                         setPlayers={setPlayers}
                         playerName={player.name}
                         player={player}
                         key={player.id}
-                        team={teamA}
-                    />
+                   />
                 ))}
             </ul>
         </form>
-    );
+    )
 }
 
-
-export default PlayersList;
+export default TeamsList;
