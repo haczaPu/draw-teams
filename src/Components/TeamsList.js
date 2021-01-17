@@ -1,22 +1,17 @@
 import React from 'react';
 
 //Import components
-import Player from './Player';
+import Team from './Team';
 
-const TeamsList = ( {players , setPlayers, teamA, setTeamA, player}) => {
+const TeamsList = ( {players , setPlayers, teamA, setTeamA, player, teamsNumber}) => {
+
+
     return (
-        <form>
-            <h5>TeamA</h5>
+        <form  className="teamslist-container">
             <ul>
-                {teamA.map( (player) => (
-                    <Player
-                        players={players}
-                        setPlayers={setPlayers}
-                        playerName={player.name}
-                        player={player}
-                        key={player.id}
-                   />
-                ))}
+                <Team />
+                <Team />
+
             </ul>
         </form>
     )

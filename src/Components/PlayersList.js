@@ -1,13 +1,16 @@
 import React from 'react';
+import '../Styles.css';
 
 //Import components
 import Player from './Player';
 
+
+
 const PlayersList = ({ players, setPlayers, teamA }) => {
 
     return(
-        <form>
-            <h3>All players</h3>
+        <form className="playerslist-container">
+            <h3>Players List</h3>
             <ul>
                 {players.map( (player) => (
                     <Player

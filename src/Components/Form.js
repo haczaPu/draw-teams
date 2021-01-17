@@ -15,7 +15,7 @@ const Form = ( {inputPlayer, setInputPlayer, players, setPlayers} ) => {
     };
 
     return(
-        <div>
+        <div className="form-container">
             <input value={inputPlayer} onChange={onChangeHandler} type="text"></input>
             <button onClick={addPlayerHandler} type="submit">Add Player</button>
         </div>

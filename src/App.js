@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './Styles.css';
+
 
 //Import components
 import Form from './Components/Form';
@@ -6,7 +8,6 @@ import PlayersList from './Components/PlayersList';
 import DrawButton from './Components/DrawButton';
 import TeamsList from './Components/TeamsList';
 import TeamsNumber from  './Components/TeamsNumber';
-
 
 const App = () => {
 
@@ -16,7 +17,19 @@ const App = () => {
     const [teamsNumber, setTeamsNumber] = useState('');
 
     return(
-        <div>
+        <div className="App">
+
+            <PlayersList
+                players={players}
+                setPlayers={setPlayers}
+            />
+            <TeamsList
+                teamsNumber={teamsNumber}
+                teamA={teamA}
+                setTeamA={setTeamA}
+                players={players}
+                setPlayers={setPlayers}
+            />
             <Form
                 inputPlayer={inputPlayer}
                 setInputPlayer={setInputPlayer}
@@ -27,22 +40,12 @@ const App = () => {
                 teamsNumber={teamsNumber}
                 setTeamsNumber={setTeamsNumber}
             />
-            <PlayersList
-                players={players}
-                setPlayers={setPlayers}
-            />
             <DrawButton
                 players={players}
                 setPlayers={setPlayers}
                 teamA={teamA}
                 setTeamA={setTeamA}
                 teamsNumber={teamsNumber}
-            />
-            <TeamsList
-                teamA={teamA}
-                setTeamA={setTeamA}
-                players={players}
-                setPlayers={setPlayers}
             />
 
         </div>
