@@ -11,12 +11,15 @@ import TeamsList from './Components/TeamsList';
 import TeamsNumber from  './Components/TeamsNumber';
 import Team from './Components/Team';
 
+const BASE_TEAM = ["Marek", "Czarek", "Darek"];
+
 const App = () => {
 
     const [inputPlayer, setInputPlayer] = useState('');
     const [players, setPlayers] = useState([]);
     const [teamsNumber, setTeamsNumber] = useState(4);
-    const [allTeams, setAllTeams] = useState([<Team key={uuidv4()} />,<Team key={uuidv4()} />,<Team key={uuidv4()} />,<Team key={uuidv4()}/>]);
+    // const [allTeams, setAllTeams] = useState([<Team key={uuidv4()} />,<Team key={uuidv4()} />,<Team key={uuidv4()} />,<Team key={uuidv4()}/>]);
+    const [allTeams, setAllTeams] = useState([BASE_TEAM, BASE_TEAM, BASE_TEAM, BASE_TEAM]);
 
     // useEffect(() => {
     //     function  setAllTeamsHandler() {
@@ -52,6 +55,15 @@ const App = () => {
  }
 
 
+  const onTeamNumberChange = num => {
+    setTeamsNumber(num);
+    let arr = [];
+    for (let i = 0; i < num; i++) {
+      arr.push(BASE_TEAM);
+    };
+    setAllTeams(arr);
+  };
+
     return(
         <div className="App">
 
@@ -71,11 +83,10 @@ const App = () => {
                 setPlayers={setPlayers}
             />
             <TeamsNumber
-                setTeamsNumber={setTeamsNumber}
+                setTeamsNumber={onTeamNumberChange}
                 teamsNumber={teamsNumber}
                 setAllTeams={setAllTeams}
                 allTeams={allTeams}
-
             />
             <DrawButton
                 players={players}

@@ -9,17 +9,17 @@ const TeamsNumber = ( {setTeamsNumber, allTeams, teamsNumber, setAllTeams } ) =>
         e.preventDefault();
         // setAllTeams([]);
         setTeamsNumber(e.target.value);
-        console.log(`Zmiana na ${e.target.value}`);
-        if( allTeams !== []){
-            // setAllTeams([]);
-            console.log(`W ifie jest allTeams = ${allTeams}`);
-        }
+        // console.log(`Zmiana na ${e.target.value}`);
+        // if( allTeams !== []){
+        //     // setAllTeams([]);
+        //     console.log(`W ifie jest allTeams = ${allTeams}`);
+        // }
 
-        for (let i = 0; i < e.target.value; i++) {
-            allTeams.push(<Team key={uuidv4}/>)
-            console.log('Push do tablicy');
-        }
-        console.log(`Na koniec alltemas = ${allTeams}`);
+        // for (let i = 0; i < e.target.value; i++) {
+        //     allTeams.push(<Team key={uuidv4}/>)
+        //     console.log('Push do tablicy');
+        // }
+        // console.log(`Na koniec alltemas = ${allTeams}`);
 
 
     };
