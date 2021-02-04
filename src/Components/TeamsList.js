@@ -24,7 +24,7 @@ const TeamsList = ({teamsNumber, allTeams, setAllTeams}) => {
 
     return (
         <div className="teamslist-container">
-          {allTeams.slice(0, teamsNumber).map((players, idx) => (
+          {allTeams.map((players, idx) => (
             <Team players={players} key={`team_${idx}`} />
           ))}
         </div>

@@ -55,6 +55,15 @@ const App = () => {
  }
 
 
+  const onTeamNumberChange = num => {
+    setTeamsNumber(num);
+    let arr = [];
+    for (let i = 0; i < num; i++) {
+      arr.push(BASE_TEAM);
+    };
+    setAllTeams(arr);
+  };
+
     return(
         <div className="App">
 
@@ -74,11 +83,10 @@ const App = () => {
                 setPlayers={setPlayers}
             />
             <TeamsNumber
-                setTeamsNumber={setTeamsNumber}
+                setTeamsNumber={onTeamNumberChange}
                 teamsNumber={teamsNumber}
                 setAllTeams={setAllTeams}
                 allTeams={allTeams}
-
             />
             <DrawButton
                 players={players}
