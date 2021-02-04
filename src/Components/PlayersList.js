@@ -6,7 +6,7 @@ import Player from './Player';
 
 
 
-const PlayersList = ({ players, setPlayers, teamA }) => {
+const PlayersList = ({ players, setPlayers }) => {
 
     return(
         <form className="playerslist-container">
@@ -19,7 +19,7 @@ const PlayersList = ({ players, setPlayers, teamA }) => {
                         playerName={player.name}
                         player={player}
                         key={player.id}
-                        team={teamA}
+
                     />
                 ))}
             </ul>

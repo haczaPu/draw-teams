@@ -9,7 +9,7 @@ const Team = () => {
             <h3>Team Name</h3>
             <div>{druzyna[0]}</div>
             <div>{druzyna[1]}</div>
-            <div className="last-team">{druzyna[2]}</div>
+            <div>{druzyna[2]}</div>
         </div>
     );
 }

@@ -11,6 +11,9 @@ body {
     width: 100vw;
     height: 100vh;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h3 {
@@ -22,13 +25,10 @@ h3 {
     text-align: center;
 }
 
-
-
 .App {
     width: 900px;
     height: 600px;
     margin: auto;
-    padding-top: 150px;
     display: grid;
     grid-template-columns: 250px 1fr 1fr;
     grid-template-rows: 400px 50px;
@@ -38,55 +38,76 @@ h3 {
     background-color: #212121;
     width: 250px;
     height: 400px;
-    box-shadow: 0 0 15px  rgba(0, 0, 0, 25);
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 25);
     border-radius: 5px 5px 0 0;
 }
 
 .teamslist-container {
-    /* padding: 0 20px; */
     grid-column-start: 2;
     grid-column-end: 4;
     display: flex;
-    justify-content: space-evenly;
-
 }
 
 .team {
     background-color: #212121;
-    width: 150px;
+    width: 100%;
     height: 380px;
     float: left;
     margin-left: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 15px  rgba(0, 0, 0, 25);
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 25);
 }
 
 .teamsnumber-container {
     background-color: #212122;
-    box-shadow: 0 0 15px  rgba(0, 0, 0, 25);
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 25);
     border-radius: 5px 0 0 5px;
     margin-left: 20px;
+    padding-top: 10px;
+
 }
 
 .form-container {
     background-color: #313133;
     border-radius:  0 0 5px 5px;
-    border-top: #888888 solid 2px;
-    box-shadow: 0 0 15px  rgba(0, 0, 0, 100);
+    border-top: #888888 solid 1px;
+    box-shadow: 0 0 5px  rgba(0, 0, 0, 100);
 }
 
-.draw-button {
+.draw-button-container {
     background-color: #212121;
-    box-shadow: 0 0 5px  rgba(0, 0, 0, 25);
+    /* box-shadow: 0 0 5px  rgba(0, 0, 0, 25); */
     border-radius: 0 5px 5px 0;
+    padding-top: 10px;
+
+
 }
 
 .select{
     border: 0 !important;
     border-radius: 5px;
-    width: 30px;
+    width: 30x;
     height: 30px;
     background-color: #4e4e4e;
     color: #FF9F47;
     cursor:pointer;
+    padding: 5px;
+}
+
+button {
+    color: #FF9F47;
+    background-color: #4e4e4e;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border: none;
+
+}
+
+button:hover {
+    color: #ffcb9b;
+}
+
+ul {
+    list-style-type: none;
 }

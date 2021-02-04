@@ -9,7 +9,7 @@ const Form = ( {inputPlayer, setInputPlayer, players, setPlayers} ) => {
     const addPlayerHandler = (e) => {
         e.preventDefault();
         setPlayers([
-            ...players, {name: inputPlayer, id:  Math.random() * 1000, teamA: 0}
+            ...players, {name: inputPlayer, id:  Math.random() * 1000}
         ]);
         setInputPlayer('');
     };

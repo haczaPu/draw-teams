@@ -1,20 +1,34 @@
 import React from 'react';
+// import { useEffect } from 'react';
 
 //Import components
-import Team from './Team';
+// import Team from './Team';
 
-const TeamsList = ( {players , setPlayers, teamA, setTeamA, player, teamsNumber}) => {
+const TeamsList = ({teamsNumber, allTeams, setAllTeams}) => {
+
+
+    // useEffect(() => {
+    //    function  setAllTeamsHandler() {
+    //         setAllTeams([]);
+    //         console.log(allTeams);
+    //         for (let i = 0; i < teamsNumber; i++) {
+    //            allTeams.push(<Team key={i} />);
+    //         };
+    //         console.log(allTeams);
+    //    }
+
+    //     setAllTeamsHandler();
+    // }, [teamsNumber]);
+
 
 
     return (
-        <form  className="teamslist-container">
-            <ul>
-                <Team />
-                <Team />
-
-            </ul>
-        </form>
-    )
-}
+        <div className="teamslist-container">
+            {allTeams}
+        </div>
+    );
+};
 
 export default TeamsList;
+
+        // eslint-disable-next-line
