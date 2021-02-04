@@ -1,4 +1,5 @@
 import React from 'react';
+import Team from './Team';
 // import { useEffect } from 'react';
 
 //Import components
@@ -21,10 +22,11 @@ const TeamsList = ({teamsNumber, allTeams, setAllTeams}) => {
     // }, [teamsNumber]);
 
 
-
     return (
         <div className="teamslist-container">
-            {allTeams}
+          {allTeams.slice(0, teamsNumber).map((players, idx) => (
+            <Team players={players} key={`team_${idx}`} />
+          ))}
         </div>
     );
 };

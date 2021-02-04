@@ -11,12 +11,15 @@ import TeamsList from './Components/TeamsList';
 import TeamsNumber from  './Components/TeamsNumber';
 import Team from './Components/Team';
 
+const BASE_TEAM = ["Marek", "Czarek", "Darek"];
+
 const App = () => {
 
     const [inputPlayer, setInputPlayer] = useState('');
     const [players, setPlayers] = useState([]);
     const [teamsNumber, setTeamsNumber] = useState(4);
-    const [allTeams, setAllTeams] = useState([<Team key={uuidv4()} />,<Team key={uuidv4()} />,<Team key={uuidv4()} />,<Team key={uuidv4()}/>]);
+    // const [allTeams, setAllTeams] = useState([<Team key={uuidv4()} />,<Team key={uuidv4()} />,<Team key={uuidv4()} />,<Team key={uuidv4()}/>]);
+    const [allTeams, setAllTeams] = useState([BASE_TEAM, BASE_TEAM, BASE_TEAM, BASE_TEAM]);
 
     // useEffect(() => {
     //     function  setAllTeamsHandler() {
